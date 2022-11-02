@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ada 1 tema 31.
+          Solicitar que se ingrese el nombre y la clave de un usuario.
+          Mostrar una ventana de alerta si en la clave se ingresan 
+          menos de 7 caracteres o más de 20 (capturar el evento onBlur)-->
+      <form action="#">
+        <input type="text" id="name" value="Ingrese nombre" >
+        <input type="password" id="contraseña" value="" onblur="vericar(this)">
+        <input type="submit" value="Confirmar">
+      </form>
+         <script>
+            function vericar(control){
+                if(control.value.length < 7 || control.value.length > 20){
+                    alert("cantidad de caracteres no valido en la clave(deben ser entre 7-20 caracteres)");
+                }
+            }
+
+         </script>
+</body>
+</html>

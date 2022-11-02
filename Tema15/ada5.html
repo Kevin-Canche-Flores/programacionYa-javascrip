@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estructura repetitiva (for)</title>
+</head>
+<body>
+  <script>
+    /*Realizar un programa que lea los lados de 4 triángulos, e informar:
+      a) De cada uno de ellos, qué tipo de triángulo es: equilátero (tres lados iguales), isósceles (dos lados iguales), o escaleno (ningún lado igual)
+      b) Cantidad de triángulos de cada tipo.
+      c) Tipo de triángulo del que hay menor cantidad.*/
+     
+      let equilatero = 0;
+      let isosceles = 0;
+      let escaleno = 0;
+      for (t = 1; t <= 4; t++){
+        let lado1 = parseInt(prompt('Ingrese el primer lado del triangulo ' + t + ' : '));
+        let lado2 = parseInt(prompt('Ingrese el segundo lado del triangulo ' + t + ' : '));
+        let lado3 = parseInt(prompt('Ingrese el tercer lado del triangulo ' + t + ' : '));
+
+        if(lado1 == lado2 && lado1 == lado3){
+          document.write('El triangulo ' + t + ' es Equilátero' + '<br>');
+          equilatero++;}
+        else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3){
+          document.write('El triangulo ' + t + ' es Isósceles.' + ' <br>');
+          isosceles++;}
+        else {
+          document.write('El triangulo ' + t + ' es Escaleno.' + ' <br>');
+          escaleno++;}
+      }
+      document.write('Cantidad de triangulos Equiláteros: ' + equilatero + '<br>');
+      document.write('Cantidad de triangulos Isósceles: ' + isosceles + '<br>');
+      document.write('Cantidad de triangulos Escaleno: ' + escaleno + '<br>');
+      if(equilatero < isosceles && equilatero < escaleno){
+        document.write('El triangulo que menos se repite es el Equilátero.');
+      } else if (isosceles < escaleno){
+        document.write('El triangulo que menos se repite es el Isósceles');
+      } else {
+        document.write('El triangulo que menos se repite es el Escaleno.');
+      }
+  </script>
+</body>
+</html>

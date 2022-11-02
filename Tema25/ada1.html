@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controles FORM, BUTTON y TEXT.</title>
+</head>
+<body>
+  <!-- Crear un programa que permita cargar un entero en un text y al presionar un botón nos muestre dicho valor elevado al cubo (emplear la función alert). -->
+  <form action="#">
+    <label for="num ">Ingrese un número:<input type="text" id="num">
+      <button type="submit" value="potencia" onclick="elevar()">Enviar</button>
+
+  </form>
+  <script>
+    function elevar(){
+      let pot = parseInt(document.getElementById('num').value);
+      pot = Math.pow(pot, 3)//pot * pot * pot;
+      alert('El cubo del numero ingresado es: ' + pot);
+    }
+  </script>
+</body>
+</html>

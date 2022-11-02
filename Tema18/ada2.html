@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funciones que retornan un valor</title>
+</head>
+<body>
+  <script>
+    /*Tema 18. Funciones que retornan un valor.
+        Ejercicio Num. 2
+          Elaborar una función a la cual le envíe
+          el valor del lado de un cuadrado y me re-
+          torne su perímetro.*/
+       function retornarPerimetro (perimetro){
+                return perimetro * 4;
+       }
+       let lado = parseInt(prompt('Ingrese el lado del cuadrado: '));
+       document.write('El tamaño del lado del cuadrado ingresado es: ' + lado + '<br>');
+       let per = retornarPerimetro(lado);
+       document.write('Su perimetro es: ' + per);
+   </script>
+</body>
+</html>

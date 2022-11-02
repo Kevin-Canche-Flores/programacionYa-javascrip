@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concepto de acumulador.</title>
+</head>
+<body>
+  <!--Se ingresan un conjunto de 5 alturas de personas por teclado. Mostrar la altura promedio de las personas.  -->
+  <script>
+    let x = 1;
+    let alt;
+    let suma = 0; 
+    let promedio;
+
+    while(x <= 5){
+      alt = parseFloat(prompt('Ingrese la estatura de la persona en cm (Ej. 175)'));
+      suma = suma + alt;
+      promedio = suma / x;
+      x++;
+    }
+    document.write('El promedio de la estatura de las 5 personas es: ' + promedio + 'cm.');
+
+  </script>
+</body>
+</html>

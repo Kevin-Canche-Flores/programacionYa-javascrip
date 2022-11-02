@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estructuras condicionales compuestas.</title>
+</head>
+<!--Realizar un programa que lea por teclado dos números, si el primero es mayor al segundo informar su suma y diferencia,
+   en caso contrario informar el producto y la división del primero respecto al segundo.  -->
+<body>
+  <script>
+    // Ejercicio Num. 6============================================
+     let num1 = parseInt(prompt('Ingrese el primer número: ')); 
+     let num2 = parseInt(prompt('Ingrese el segundo número: ')); 
+       if (num1 > num2){
+            let suma = num1 + num2;
+            let resta = num1 - num2;
+            document.write('El primer número es mayor al segundo y por lo tanto su suma es de: ' + suma + ' y su diferencía es de: ' + resta);
+           }
+       else {
+             let producto = num1 * num2;
+             let division = num1 / num2;
+             document.write('El segundo número es mayor al primero y por lo tanto su producto es de: ' + producto + ' y su division es de: ' + division);
+            }
+  </script>
+</body>
+</body>
+</html>

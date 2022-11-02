@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ADA NUM 3 TEMA 25.
+         Cargar un nombre y un apellido en sendos text. Al presionar un botón, concatenarlos
+         y mostrarlos en un tercer text (Tener en cuenta que podemos modificar la propiedad 
+         value de un objeto TEXT cuando ocurre un evento) -->
+         
+    <form action="#">
+        <label for="concatenar">Ingrese nombre:<input type="text" id="name"></label><br>
+        <label for="concatenar">Ingrese apellido:<input type="text" id="apellido"></label><br>
+        <input type="submit" value="concatenar" onclick="concatenar()"><br>
+        <label for="resultado">Resultado:<input type="text" id="resul"></label>
+    </form>
+    <script>
+        function concatenar(){
+            let name = document.getElementById("name").value;
+            let apellido = document.getElementById("apellido").value;
+            document.getElementById("resul").value = name + apellido;
+        }
+    </script>
+</body>
+</html>

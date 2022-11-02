@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funciones con parámetro</title>
+</head>
+<body>
+  <script>
+     /*Tema 17. Funciones con parámetros.
+        ejercicio Num. 1
+         Elaborar una función a la cual le enviemos tres enteros y muestre el menor.*/
+         function mostrarMenor (num1, num2, num3){
+            if (num1 < num2 && num1 < num3){
+                document.write(num1 + ' es el número menor.');
+            } else if (num2 < num3){
+                       document.write(num2 + ' es el número menor.');
+            }  else {
+                     document.write(num3 + ' es el número menor.');}
+        }
+          let valor1 = parseInt(prompt('Ingrese el primer valor: '));
+          let valor2 = parseInt(prompt('Ingrese el segundo valor: '));
+          let valor3 = parseInt(prompt('Ingrese el tercer valor: '));
+          mostrarMenor(valor1, valor2, valor3);
+  </script>
+</body>
+</html>

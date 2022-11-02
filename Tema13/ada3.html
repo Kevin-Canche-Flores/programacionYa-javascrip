@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concepto de acumulador.</title>
+</head>
+<body>
+ <!--En una empresa trabajan 5 empleados cuyos sueldos oscilan entre $100 y $500, realizar un programa que lea los sueldos que cobra cada empleado e informe cuántos 
+    empleados cobran entre $100 y $300 y cuántos cobran más de $300. Además el programa deberá informar el importe que gasta la empresa en sueldos al personal.  -->
+    <script>
+      let x = 1;
+      let sueldoMayor = 0;
+      let sueldoMenor = 0;
+      let importe = 0;
+      while(x <= 5){
+        let sueldo = parseInt(prompt('Ingrese sueldo del empleado: '));
+        importe =importe + sueldo;
+          if(sueldo >= 100 && sueldo <= 300){
+            sueldoMenor++;
+          } else {
+            sueldoMayor++;
+          }
+          x++;
+      }
+      document.write('El número de empleados que tienen un sueldo menor a 300 es de: ' + sueldoMenor + '<br>');
+      document.write('El número de empleados que tienen un sueldo mayor a 300 es de: ' + sueldoMayor + '<br>');
+      document.write('El importe total que gasta la empresa en sueldos es de: ' + importe);
+    </script>
+</body>
+</html>

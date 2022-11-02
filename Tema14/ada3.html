@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estructura repetitiva (do/while)</title>
+</head>
+<body>
+  <script>
+    /*Se realizó un censo provincial y se desea procesar la información obtenida en dicho censo. 
+    De cada una de las personas censadas se tiene la siguiente información: número de documento, 
+    edad y sexo ('femenino' o 'masculino' Se pide confeccionar un programa que lea los datos de 
+    cada persona censada (para finalizar ingresar el valor cero en el número de documento) e informar:
+ 
+a)	Cantidad total de personas censadas.
+b)	Cantidad de varones.
+c)	Cantidad de mujeres.
+d)	Cantidad de varones cuya edad varía entre 16 y 65 años.*/
+let nrodocument;
+let totalPers = 0;
+let edad;
+let edadVaron = 0;
+let sexo;
+let varon = 0;
+let mujer = 0;
+
+do {
+  nrodocument = parseInt(prompt('Ingrese número de documento: '));
+  if (nrodocument != 0){
+    edad = parseInt(prompt('Ingrese edad: '));
+    sexo = prompt('Ingrese sexo (masculino o femenino): ');
+    if (sexo == 'masculino'){
+      varon++;
+      if (edad >= 16 && edad <= 65){
+        edadVaron++;
+      }
+    } else {
+      mujer++;
+    }
+    totalPers++;
+  }
+} while ( nrodocument != 0);
+document.write('Total personas censadas: ' + totalPers + '<br>');
+document.write('Total varones censados: ' + varon + '<br>');
+document.write('Total mujeres censadas: ' + mujer + '<br>');
+document.write('Total de varones censadas entre 16 y 65 años: ' + edadVaron + '<br>');       
+   </script>
+</body>
+</html>

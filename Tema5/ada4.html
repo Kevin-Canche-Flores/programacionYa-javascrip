@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estructuras secuenciales de programación.</title>
+</head>
+<body>
+  <!-- Se debe desarrollar un programa que pida el ingreso del precio de un artículo y la 
+    cantidad que lleva el cliente. Mostrar lo que debe abonar el comprador (Ingresar por 
+    teclado un precio sin decimales, es decir un entero: 2, 7, 90 etc.) -->
+  <script>
+    //Cuarto Ejercicio==========================================================================
+       //  Ingreso de valores.
+        let precio = prompt('Ingrese el precio del artículo');
+        let cantidad = prompt ('Ingrese la cantidad de articulos a requerir');
+          //  conversión de valores ingresados.
+          let importe = parseInt(precio) * parseInt(cantidad);       
+          document.write('El importe total de los articulos es de $' + importe + ' pesos mexicanos.');
+  </script>
+</body>
+</html>

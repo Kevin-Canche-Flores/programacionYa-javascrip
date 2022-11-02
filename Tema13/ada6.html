@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concepto de acumulador.</title>
+</head>
+<body>
+<!--Realizar un programa que permita cargar dos listas de 3 valores cada una. Informar con un
+      mensaje cual de las dos listas tiene un valor acumulado mayor (mensajes 'Lista 1 mayor',
+     'Lista 2 mayor', 'Listas iguales') Tener en cuenta que puede haber dos o más estructuras repetitivas en un algoritmo.  -->
+     <script>
+      let x  = 0;
+      let lista1 = 0;
+      let lista2 = 0;
+      while(x < 1){
+        let num1 = parseInt(prompt('Ingrese el primer valor de la lista 1: '));
+        let num2 = parseInt(prompt('Ingrese el segundo valor de la lista 1: '));
+        let num3 = parseInt(prompt('Ingrese el tercer valor de la lista 1: '));
+        lista1 = num1 + num2 + num3;
+        let y = 0; 
+        while (y < 1){
+          let num4 = parseInt(prompt('Ingrese el primer valor de la lista 2: '));
+          let num5 = parseInt(prompt('Ingrese el segundo valor de la lista 2: '));
+          let num6 = parseInt(prompt('Ingrese el tercer valor de la lista 2: '));
+          lista2 = num4 + num5 + num6;
+          y++;
+        }
+        x++;
+      }
+      if (lista1 > lista2){
+        document.write('Lista 1 mayor.');
+      } else if (lista2 > lista1){
+        document.write('Lista 2 mayor.');
+      } else {
+        document.write('Listas iguales.')
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operadores lógicos && (y) en las estructuras condicionales.</title>
+</head>
+<body>
+  <!-- TEMA Num. 9
+     Se ingresan tres valores por teclado, si todos son iguales se imprime la suma
+     del primero con el segundo y a este resultado se lo multiplica por el tercero 
+     (tener en cuenta que puede haber tres condiciones simples) -->
+  <script>
+    let valor1 = parseInt(prompt('Ingrese el primer valor'));
+    let valor2 = parseInt(prompt('Ingrese el segundp valor'));
+    let valor3 = parseInt(prompt('Ingrese el tercer valor'));
+
+    if (valor1 == valor2 && valor1 == valor3){
+      let producto = (valor1 + valor2) * valor3;
+      document.write('La suma del primer valor con el segundo y la multiplicación con el tercero tiene como resultado: ' + producto);
+    } else { document.write('Al menos un valor no es igual a los demas valores ingresados.');}
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*Realizar la búsqueda de un string clave en un
+      string fuente. Se deberá ingresar una frase o
+      texto (fuente) y luego la clave a buscar.
+      En caso de encontrarla, imprimir la posición,
+      de lo contrario una leyenda que indique que no está.*/ 
+      
+      let frase = prompt("Ingrese una frase o texto(Fuente): ");
+      let palabra = prompt("Ingrese palabra a buscar: ");
+      palabra = palabra.toLowerCase();
+      frase = frase.toLowerCase();
+      let pos = frase.indexOf(palabra);
+      if(pos != -1){
+      document.write('La palabra "'+ palabra + '" si se encuentra en el texto, en la posicion: ' + frase.indexOf(palabra));
+      }else {
+          document.write('La palabra "'+ palabra + '" no se encuentra en el texto.');}
+  </script>
+</body>
+</html>

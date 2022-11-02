@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operadores lógicos && (y) en las estructuras condicionales.</title>
+</head>
+<body>
+  <!-- Realizar un programa que pida cargar una fecha cualquiera, luego verificar si dicha
+     fecha corresponde a Navidad (se debe cargar por separado el dia, el mes y el año) -->
+  <script>
+    let day = parseInt(prompt('Ingrese día: '));
+    let month = parseInt(prompt('Ingrese mes: '));
+    let year = parseInt(prompt('Ingrese año: '));
+    
+    if (day == 25 && month == 12){
+      document.write('¡la fecha ingresada corresponde a navidad!');
+    }
+    else {
+      document.write('¡La fecha ingresada no corresponde a navidad!');
+    }
+  </script>
+</body>
+</html>

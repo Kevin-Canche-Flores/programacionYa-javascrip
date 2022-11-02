@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funciones que retornan un valor</title>
+</head>
+<body>
+  <script>
+    /*Tema 18. Funciones que retornan un valor.
+       Ejercicio Num. 1
+         Confeccionar una función a la cual le envíe
+         tres enteros y retorne el mayor de ellos.*/
+      function numeroMayor (num1, num2, num3){
+               if (num1 > num2 && num1 > num3){
+                   return num1;
+               } else if (num2 > num3){
+                          return num2;
+               } else {
+                      return num3;}
+      }
+      
+      let valor1 = parseInt(prompt('Ingrese el primer número: '));
+      let valor2 = parseInt(prompt('Ingrese el segundo número: '));
+      let valor3 = parseInt(prompt('Ingrese el tecer valor: '));
+      document.write('Los números ingresados son: ' + valor1 + ', ' + valor2 + ', ' + valor3 + '<br>');
+      let mayor = numeroMayor(valor1, valor2, valor3);
+      document.write('El numero mayor de los 3 números ingresados es: ' + mayor);
+  </script>
+</body>
+</html>

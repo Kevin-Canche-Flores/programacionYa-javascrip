@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concepto de acumulador.</title>
+</head>
+<body>
+  <!--Escribir un programa que lea 10 notas de alumnos y nos informe cuántos tienen notas mayores o iguales a 7 y cuántos menores.  -->
+  <script>
+    let x = 1                    //Repetidor
+    let calif;                  //Aquí se almacena la calif. del alumno.
+    let passed = 0;
+    let reprobate = 0;
+
+    while (x <= 10){
+      calif = parseInt(prompt('Ingrese calificación: '));
+      if ( calif >= 7){
+        passed++;
+      } else {
+        reprobate++
+      }
+      x++;
+    }
+    document.write('Los alumnos que obtuvieron una calificaión mayor o igual a 7 son un total de: ' + passed + '<br>');
+    document.write('Los alumnos que obtuvieron una calificaión menor a 7 son un total de: ' + reprobate);
+  </script>
+</body>
+</html>

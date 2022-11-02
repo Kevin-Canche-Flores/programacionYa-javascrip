@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Confeccionar una página que permita tomar un examen múltiple choice.
+       Se debe mostrar una pregunta y seguidamente un objeto SELECT con las
+       respuestas posibles. Al presionar un botón mostrar la cantidad de 
+       respuestas correctas e incorrectas (Disponer 4 preguntas y sus
+       respectivos controles SELECT) -->
+
+<h1>Examen múltiple choice!!!</h1>
+       <form action="#">
+        <label for="select1">¿Cual es la capital de Yúcatan, México?</label>
+        <select id="question1">
+          <option value="">--Elija opción--</option>
+          <option value="correcto">Mérida.</option>
+          <option value="incorrecto">Kanasín.</option>
+          <option value="incorrecto">Tizimin.</option>
+        </select><hr>
+        <label for="select2">¿Cuanto es la suma de 2 + 2?</label>
+          <select id="question2">
+            <option value="">--Elija opción--</option>
+            <option value="incorrecto">8</option>
+            <option value="correcto">4</option>
+            <option value="incorrecto">5</option>
+            <option value="incorrecto">6</option>
+          </select><hr>
+          <label for="select3">¿Cuantos años tiene un año bisiesto?</label>
+          <select id="question3">
+            <option value="">--Elija opción--</option>
+            <option value="incorrecto">365 días.</option>
+            <option value="incorrecto">364 días.</option>
+            <option value="incorrecto">NInguna de la opciones anteriores.</option>
+            <option value="correcto">366 días.</option>
+          </select><hr>
+          <label for="select4">¿Cuantos lados tiene un Octágono?</label>
+          <select id="question4">
+            <option value="">--Elija opción--</option>
+            <option value="correcto">8</option>
+            <option value="incorrecto">7</option>
+            <option value="incorrecto">9</option>
+            <option value="incorrecto">10</option>
+          </select><hr>
+            <input type="submit" id="comprobarRespuestas" onclick="comprobar()">
+           <label for="correctas">Respuestas correctas:<input type="text" id="correctas"></label>
+           <label for="incorrectas">Respuestas incorrectas:<input type="text" id="incorrectas"></label>
+       </form>
+
+<script>
+    function comprobar(){
+    let cantCorrectas = 0;
+    let cantIncorrectas = 0;
+
+    if (document.getElementById("question1").value == "correcto"){
+        cantCorrectas++;
+    }                   else {cantIncorrectas++;}  
+    if (document.getElementById("question2").value == "correcto"){
+        cantCorrectas++;} 
+                        else {cantIncorrectas++;}    
+    if (document.getElementById("question3").value == "correcto"){
+        cantCorrectas++ } 
+                        else {cantIncorrectas++;}    
+    if (document.getElementById("question4").value == "correcto"){
+       cantCorrectas++;}
+                         else {cantIncorrectas++;};
+    document.getElementById("correctas").value = cantCorrectas;
+    document.getElementById("incorrectas").value = cantIncorrectas;
+  }    
+</script>
+</body>
+</html>

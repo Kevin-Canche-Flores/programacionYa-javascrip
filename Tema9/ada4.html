@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operadores lógicos && (y) en las estructuras condicionales.</title>
+</head>
+<body>
+  <!-- Escribir un programa que pida ingresar la coordenada de un punto en el plano, es decir dos valores enteros x e y.
+Posteriormente imprimir en pantalla en qué cuadrante se ubica dicho punto. (1º Cuadrante si x > 0 Y y > 0 , 2º Cuadrante: x < 0 Y y > 0, etc.) -->
+  <script>
+    let x = parseInt(prompt('Ingrese coordenada X: '));
+    let y = parseInt(prompt('Ingrese coordenada Y: '));
+    if (x > 0 && y > 0){
+      document.write('La coordenada se ubica en el 1º cuadrante.');
+    }
+    else if (x < 0 && y > 0){
+      document.write('La coordenada se ubica en el 2º cuadrante.');
+    }
+    else if (x < 0 && y < 0){
+      document.write('La coordenada se ubica en el 3º cuadrante.');
+
+    }
+    else if (x > 0 && y < 0){
+      document.write('La coordenada se ubica en el 4º cuadrante.');
+    }
+    else {
+      document.write('Se encuentra sobre un eje.'); // Fallamos al no validar el ultimo else sobre un eje,  queda como retroalimentación.
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <!-- Tema 25 -- ada num. 2 -->
+    <label>Ingrese un número: <input type="text" value=" " id="num1" ></label><br>
+    <label>Ingrese un número: <input type="text" value=" " id="num2" ></label>
+    <input type="submit" onclick="comparar()" value="Comparar">
+  </form>
+    <script>
+      /*Cargar dos números en objetos de tipo text y al presionar un botón, mostrar el mayor.*/
+        function comparar(){
+         let num1 = document.getElementById("num1").value;
+         let num2 = document.getElementById("num2").value;
+            if(num1 > num2){
+               alert("El número" + num1 + " es mayor.");
+            } else if(num2 > num1) {
+                      alert("El número" + num2 + " es mayor.");
+            }
+             else {
+                 alert("Ingrese numeros para comparar porfavor.");
+             }
+        }      
+    </script>
+</body>
+</html>

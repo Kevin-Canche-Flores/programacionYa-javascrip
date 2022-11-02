@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ada 1 tema 29
+         Confeccionar una página que muestre dos objetos de la clase RADIO
+         solicitando que seleccione si es mayor de 18 años o no. Al presionar
+         un botón mostrar un alert indicando si puede ingresar al sitio o no. -->
+         <label for="bottomRadio">Para visitar este sitio web, debes tener al menos 18 años, ¿eres mayor de edad?</label><br>
+         <input type="radio" name="mayoriaEdad" id="radio1">Si<br>
+         <input type="radio" name="mayoriaEdad" id="radio2">No<br>
+         <input type="submit" value="Confirmar" onclick="verificar()">
+         <script>
+            function verificar() {
+                if(document.getElementById("radio1").checked){
+                    alert("Usted puede ingresar al sitio web.");
+                }
+                if(document.getElementById("radio2").checked){
+                    alert("Usted NO puede ingresar al sitio web.");
+                }
+            }
+         </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ada 1 tema 28
+         Confeccionar una página que muestre tres checkbox
+         que permitan seleccionar los deportes que practica
+         el usuario (Fútbol, Básket, Tenis) Mostrar al presionar
+         } un botón los deportes que eligió.
+         Solución -->
+         <form action="#">
+            <label for="deporte">Seleccione los deportes que practica.</label><br>
+            <input type="checkbox" id="checkbox1">Fútbol<br>
+            <input type="checkbox" id="checkbox2">Básket<br>
+            <input type="checkbox" id="checkbox3">Tenis<br>
+            <input type="button" value="Confirmar" onclick="Verificar()">
+         </form>
+         <script>
+            function Verificar() {
+                let deportes = "";
+                if (document.getElementById("checkbox1").checked){
+                    deportes = deportes + "Fútbol ";
+                }
+                if (document.getElementById("checkbox2").checked){
+                    deportes = deportes + "Básket ";
+                }
+                if (document.getElementById("checkbox3").checked){
+                    deportes = deportes + "Tenis";
+                }
+                alert("Los deportes que ustes practica son: " + deportes);
+            }
+         </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estructuras condicionales anidadas.</title>
+</head>
+<body>
+<!-- Confeccionar un programa que permita cargar un número entero positivo de hasta tres cifras y muestre un mensaje indicando si tiene 1, 2, o 3 cifras. -->
+  <script>
+    let num = parseInt(prompt('Ingrese un número entre 0 y 999'));
+      if (num >= 0 && num < 10) {
+           document.write('El valor ingresado tiene un solo digíto.')}
+      else if(num >= 10 && num < 100) {
+           document.write('El valor ingresado tiene dos digítos.')}
+      else if(num >= 100 && num < 1000) {
+           document.write('El valor ingresado tiene tres digítos.')}
+      else {
+        document.write('El valor ingresado no esta en el rango de números disponibles, por favor ingrese un número valido.')
+      }
+  </script>
+</body>
+</html>

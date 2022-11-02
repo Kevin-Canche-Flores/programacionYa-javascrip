@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funciones que retornan un valor</title>
+</head>
+<body>
+  <script>
+    /*Tema 18. Funciones que retornan un valor.
+        Ejercicio Num. 4
+          Elaborar una función que reciba tres enteros y retorne el promedio.*/
+       function promedioNumeros (num1, num2, num3){
+                let promedio = (num1 + num2 + num3)/3;
+                return promedio;
+       }
+       let valor1 = parseInt(prompt('Ingrese el primer número: '));
+       let valor2 = parseInt(prompt('Ingrese el segundp número: '));
+       let valor3 = parseInt(prompt('Ingrese el tercer número: '));
+       let prom = promedioNumeros (valor1, valor2, valor3);
+       document.write('El promedio de los números ingresados es: ' + prom);
+   </script>
+</body>
+</html>

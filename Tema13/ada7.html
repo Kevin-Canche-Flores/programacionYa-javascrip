@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concepto de acumulador.</title>
+</head>
+<body>
+  <!--Desarrollar un programa que permita cargar 5 números enteros y luego nos informe cuántos valores fueron pares y cuántos impares.
+      Emplear el operador "%" en la condición de la estructura condicional.
+	    if (valor%2==0)
+      El operador "%" retorna el resto de la división valor / 2. Por ejemplo: 12 % 2, retorna 0; 13 % 2, retorna 1, porque el resto de dividir 13 en 2 es 1. -->
+  <script>
+    let x = 0;   //Repetidor
+    let par = 0;
+    let impar = 0; 
+    while(x < 5){
+      let num = parseInt(prompt('Ingrese un numero entero: '));
+          if (num %2 == 0){ par++;}
+             else { impar++; }
+          x++;
+    }
+    document.write('El total de números pares es: ' + par + '<br>');
+    document.write('El total de números impares es de: ' + impar);
+  </script>
+</body>
+</html>
