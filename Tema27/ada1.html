@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- TEMA 27 Control SELECT -- ADA 1
+         Confeccionar una página que muestre un objeto SELECT con distintos 
+         tipos de pizzas (Jamón y Queso, Muzzarella, Morrones). Al seleccionar
+         una, mostrar en un objeto de tipo TEXT el precio de la misma. -->
+
+    <form action="#">
+        <select name="select1" id="pizza" onchange="mostrarCostoPizza()">
+            <option value="">--Seleccione pizza--</option>
+            <option value="$110">Jamón y Queso</option>
+            <option value="$145">Muzzarella</option>
+            <option value="$120">Morrones</option>
+        </select><br>
+        <label for="costo">Costo: <input type="text" id="costo"></label>
+    </form>
+    <script>
+        function mostrarCostoPizza(){
+            let costo = document.getElementById("pizza");
+            document.getElementById("costo").value = costo.options[costo.selectedIndex].value;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- TEMA 27 Control SELECT -- ADA 3
+        Confeccionar una página que permita seleccionar una pizza
+        y la cantidad de unidades. Luego al presionar un botón 
+        calcular el importe a pagar. Utilizar un objeto de la clase
+        SELECT para la selección de la pizza, pudiendo ser:
+        Queso: $ 4.
+        Jamón y queso: $ 6.
+        Especial: $ 10.
+        A la cantidad de pizzas cargarla en un objeto de la clase TEXT
+        y en otro objeto de la clase TEXT mostrar el importe total a abonar. -->
+
+        <form action="#">
+            <label for="pizza">Seleccione Pizza:</label><br>
+            <select name="pizza" id="escojerPizza">
+                <option value="">--Elija opción--</option>
+                <option value="4">Queso</option>
+                <option value="6">Jamón y Queso</option>
+                <option value="10">Especial</option>
+            </select><br>
+            <label for="cantidadPizzas">Ingrese cantidad de piezas: </label>
+            <input type="text" id="cantidadPizzas"><br>
+            <input type="button" onclick="calcularCoste()" value="Generar Pedido"><br>
+            <label for="total">Total a pagar: </label>
+            <input type="text" id="total">
+        </form>
+
+        <script>
+            function calcularCoste(){
+                let pizza = document.getElementById("escojerPizza");
+                let costoPizza = pizza.options[pizza.selectedIndex].value;
+                let pzas = document.getElementById("cantidadPizzas").value;
+                costoPizza = parseInt(costoPizza);
+                pzas = parseInt(pzas);
+                total = costoPizza * pzas;
+                document.getElementById("total").value = total + " pesos MX.";
+            }
+        </script>
+</body>
+</html>
