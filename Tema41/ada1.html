@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Ada 1 Tema 41 
+        Plantear una clase persona (que permita cargar por teclado su nombre y edad).
+        Por otro lado crear una clase empresa que tenga como atributo la edad tope 
+        para que una persona pueda ingresar como trabajador en la misma (60 años)
+        Confeccionar un pequeño programa en JavaScript que defina 3 objetos de la clase
+        persona y 1 de la clase empresa. Mostrar cuántas de esas personas están inhabilidadas
+        para ingresar como trabajadores de acuerdo a la edad tope. -->
+
+        <script>
+            // CLASE PERSONA.........................................
+            function Persona(){
+                this.name = prompt("Ingrese nombre: ");
+                this.age = parseInt(prompt("Ingrese edad: "));
+            }
+            //CLASE EMPRESA********************************
+            function Empresa(){
+                this.edadTope = 60;
+                this.verificarEdad = function(persona){
+                    if(persona.age >= this.edadTope){
+                        return true;
+                    } else return false;
+                }
+            }
+
+            persona1 = new Persona()
+            persona2 = new Persona()
+            persona3 = new Persona()
+            let empresa = new Empresa()
+            let cant = 0;
+            if(empresa.verificarEdad(persona1)){
+                cant++
+            }
+            if(empresa.verificarEdad(persona2)){
+                cant++
+            }
+            if(empresa.verificarEdad(persona3)){
+                cant++
+            }
+            document.write("La cantidad de trabajadores que no pueden laborar en la empresa son: " + cant);
+        </script>
+</body>
+</html>

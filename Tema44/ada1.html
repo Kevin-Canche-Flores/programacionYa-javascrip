@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Tems 44 Ada 1 Array: Diferentes formas de crearlos.
+       Confeccionar un programa que defina dos array, en uno almacenar
+       los días de la semana y en otro los nombres de los meses. Emplear
+       dos sintaxis diferentes para crear e inicializar sus componentes. -->
+  <script>
+    let vectorDias = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
+    let meses = new Array(
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre"
+    );
+    let numeros = new Array();
+    numeros[0] = 1;
+    numeros[1] = 2;
+    numeros[2] = 3;
+    numeros[3] = 4;
+    numeros[4] = 5;
+    numeros[5] = 6;
+    numeros[6] = 7;
+    numeros[7] = 8;
+    numeros[8] = 9;
+    numeros[9] = 10;
+
+    document.write(vectorDias[1] + "<br>");
+    document.write(meses[6] + "<br>");
+    document.write(numeros[0] + "<br>");
+    document.write(vectorDias[5] + " " + meses[11] + " " + numeros[9]);
+  </script>
+</body>
+</html>

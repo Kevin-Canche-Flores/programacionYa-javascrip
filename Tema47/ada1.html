@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Tema 47 ada1 Array: métodos push y pop
+       Crear un vector con 5 valores aleatorios comprendidos entre 1 y 1000.
+       Luego extraer los dos últimos elementos sumarlos y mostrarlos. Imprimir
+       también el tamaño final del vector. -->
+  <script>
+    let vector = [];
+    let indice = 0;
+    let suma = 0;
+    document.write("Vector con 5 numeros aleatorios entre 1 a 1000." + "<br>");
+    for (f = 0; f < 5; f++) {
+      vector[indice] = parseInt(Math.random() * 1000);
+      document.write(vector[indice] + "<br>");
+      indice++;
+    }
+    for (f = 0; vector.length > 3; f++) {
+      suma = suma + vector.pop();
+    }
+    document.write("La suma de los ultimos dos valores eliminados son: " + suma + "<br>");
+    document.write("El vector despues del metodo pop tiene " + vector.length + " valores restantes y sus valores son: " + vector)
+  </script>
+</body>
+</html>

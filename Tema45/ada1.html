@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Tema 45 ada 1 Array: densos
+        Crear un vector con 10 valores aleatorios comprendidos entre 1 y 500. Luego crear otros dos vectores y copiar los elementos menores a 250 en el segundo vector y los mayores o iguales a 250 en el tercer vector. Imprimir los tamaños del segundo y tercer vector. Imprimir los tres vectores. -->
+  <script>
+    let vector1 = [];
+    let indice = 0;
+    let vector2 = [];
+    let indice2 = 0;
+    let vector3 = [];
+    let indice3 = 0;
+    do {
+      vector1[indice] = Math.random() * 500;
+      vector1[indice] = parseInt(vector1[indice]);
+      indice++;
+    } while (vector1.length < 10)
+
+    for (f = 0; f < vector1.length; f++) {
+      if (vector1[f] < 250) {
+        vector2[indice2] = vector1[f];
+        indice2++;
+      } else {
+        vector3[indice3] = vector1[f];
+        indice3++;
+      }
+    }
+    document.write("El tamaño del vector 2 es: " + indice2);
+    document.write("<br>");
+    document.write("El tamaño del vector 3 es: " + indice3);
+    document.write("<br>");
+    document.write("Los números de los 3 vectores son: ");
+    document.write("<br>");
+    document.write("Vector 1: " + vector1);
+    document.write("<br>");
+    document.write("Vector 2: " + vector2);
+    document.write("<br>")
+    document.write("Vector 3: " + vector3);
+  </script>
+</body>
+</html>

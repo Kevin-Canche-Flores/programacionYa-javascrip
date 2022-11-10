@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Tema 50 ada1 Array: métodos sort y reverse
+       Cargar los sueldos de un conjunto de empleados.
+       Finalizar la carga al ingresar cero. Mostrar 
+       por pantalla los sueldos ordenados de mayor a menor. -->
+  <script>
+    let sueldos = [];
+    let valor;
+    // Cargando Datos...
+    do {
+      valor = parseInt(prompt("Ingrese sueldo de empleado (Finaliza al introducir 0)"));
+      if (valor != 0) {
+        sueldos.push(valor);
+      }
+    } while (valor != 0);
+    // Mostrando los datos capturados en la maquina...
+    document.write("Lista de sueldos capturados en la maquina sin ordenar:" + "<br>");
+    for (f = 0; f < sueldos.length; f++) {
+      document.write(sueldos[f] + "<br>");
+    }
+    //Sueldos ordenandolos de mayor a menor con el metodo sort(function(v1, v2){});...
+    sueldos.sort(function (valor1, valor2) {
+      if (valor1 > valor2) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+    //Lista de sueldos ordenados de mayor a menor con el metodo reverse...
+    sueldos.reverse();
+    document.write("Lista de sueldos de mayor a menor:" + "<br>");
+    for (f = 0; f < sueldos.length; f++) {
+      document.write(sueldos[f] + "<br>");
+    }
+  </script>
+</body>
+</html>

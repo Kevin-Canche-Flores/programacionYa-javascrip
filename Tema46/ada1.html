@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Tuvimos que recurrir a un poco de ayuda... :c
+    Tema 46 ada 1 Array: no densos o dispersos
+    Crear un vector disperso que representen premios de una rifa. Las posiciones indican los números que tienen premio. Almacenar en dichas posiciones los premios. Genera 10 premios con los montos 1000,2000,3000 etc.
+    La cantidad de números de la rifa son 1000.
+    Generar valores aleatorios para los números con premio.
+    Imprimir Los números con premio y los montos de los mismos. -->
+  <script>
+    let vector = [];
+    let indice = 0;
+
+    do {
+      let premio = parseInt(Math.random() * 1000);
+      vector[premio] = 1000 * (indice + 1);
+      indice++;
+    } while (indice < 10)
+
+    for (f = 0; f < vector.length; f++) {
+      if (vector[f] != undefined) {
+        document.write("El número: " + f + "tiene un premio de: " + vector[f] + "<br>")
+      }
+    }
+  </script>
+</body>
+</html>
