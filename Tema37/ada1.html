@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- https://www.google.com/doodles/halloween-2022 -->
+
+    <!-- ada 1 del tema 37...
+         Confeccionar un programa que al presionar un botón
+         aparezca una ventana que ocupe todo el ancho del 
+         monitor y la mitad de su altura. -->
+
+    <form>
+        <input type="button" value="Open new window" onclick="openWindow()">
+    </form>
+
+    <script>
+        function openWindow(){
+           window.open('', '', 'width=' + screen.availWidth + ',height=' + screen.availHeight / 2);
+        }
+    </script>
+
+</body>
+</html>

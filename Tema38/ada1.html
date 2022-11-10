@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="cookies()">
+  <!--ada 1 del tema numero 38... 
+      Una vez que se cargue la página mostrar un alert indicando si el navegador tiene activas las cookies. -->
+
+    <script>
+        
+        function cookies() {
+            if(window.navigator.cookieEnabled == true){    // window.navigator.cookieEnabled ==> es opcional poner el window no es 
+                                                           // necesario pero a mi me gusta ser especifico y ordenado. C:
+                alert("Su navegador tiene activada las cookies.");
+            } else { alert("Su navegador no tiene activado sus cookies.");
+        }
+        }
+    </script>
+</body>
+</html>

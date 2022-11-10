@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- ada 1 tema 40...
+         Confeccionar una clase llamada suma, que contenga dos atributos
+         (valor1, valor2) y tres métodos: cargarvalor1, cargarvalor2 y 
+         retornarresultado. Implementar la clase suma.
+         La definición de un objeto de la clase que deben plantear es:
+         let s=new suma();
+         s.primerValor(10);
+         s.segundoValor(20);
+         document.write('La suma de los dos valores es:'+s.retornarResultado()); -->
+  <script>
+    function Suma(valor1, valor2) {  //estos son los 2 atributos que pide el ejercicio.
+      this.cargarvalor1 = valor1;  //atributo1
+      this.cargarvalor2 = valor2;  //atributo2
+      //Metodos....
+      this.primerValor = function (valor1) {   //metodo 1 para el primer atributo
+        this.cargarvalor1 = valor1;
+      }
+      this.segundoValor = function (valor2) {   //metodo 2 para el segundo atributo atributo
+        this.cargarvalor2 = valor2;
+      }
+      this.retornarResultado = function () {  //tercer metodo donde toma el metodo 1 y 2 y retorna la suma de ellos.
+        return this.cargarvalor1 + this.cargarvalor2;
+      }
+    }
+
+    let suma1 = new Suma(10, 20);
+    document.write("La suma de 10 y 20 es: " + suma1.retornarResultado() + "<br>");
+    suma1.primerValor(50);
+    suma1.segundoValor(40);
+    document.write("La  suma de los valores es de: " + suma1.retornarResultado());
+  </script>
+</body>
+</html>
