@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  </style>
+</head>
+<body>
+  <!--Tema 90 ada 1   ES6 - Plantillas de cadenas de caracteres
+      Confeccionar una función que retorne una cadena con el día,
+      mes y año actual. Utilizar una plantilla de cadena de caracteres para generarla.-->
+  <script>
+    function retornarFecha() {
+      const today = new Date();
+      return [today.getDate(), (today.getMonth() + 1), today.getFullYear()];
+    }
+    document.write(`Fecha: ${retornarFecha()}`);
+  </script>
+</body>
+</html>
