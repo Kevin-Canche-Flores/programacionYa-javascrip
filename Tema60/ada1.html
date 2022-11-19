@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Tema 60 ada1 Funciones: anidadas
+         Confeccionar una función que reciba un parámetro y defina una
+         variable local. Definir dentro de la función que acabamos de
+         crear una función anidada que contenga un parámetro. En la función
+         anidada imprimir el parámetro de la función que la contiene, el
+         parámetro que tiene la función anidada y el valor de la variable
+         local de la función principal. -->
+  <script>
+    function función1(x) {
+      y = "hello world!!!";
+      function función2(f) {
+        document.write("El parametro de la funcion1 es: " + x + "<br>");
+        document.write("El parametro de la funcion2 es: " + f + "<br>");
+        document.write("El valor de la variable local de function1 es: " + y + "<br>");
+      }
+      función2(5);
+    }
+    función1(2)
+  </script>
+</body>
+</html>

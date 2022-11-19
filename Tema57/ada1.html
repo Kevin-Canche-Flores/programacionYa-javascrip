@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Tema 57 ada 1 Funciones: objeto arguments
+        Confeccionar una función que obtenga y retorne el
+        mayor valor de una lista de enteros que le pasamos
+        como parámetros.-->
+  <script>
+    function buscarMayor() {
+      let mayor = arguments[0];
+      for (f = 0; f < arguments.length; f++) {
+        if (arguments[f] > mayor) {
+          mayor = arguments[f];
+        } 
+      } 
+      return mayor;
+    }
+    document.write(buscarMayor(1, 2, 50, 350, 800, 250, 60));   
+  </script>
+</body>
+</html>

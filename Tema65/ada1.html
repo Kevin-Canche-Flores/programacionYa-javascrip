@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      background-color: #f00;
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Tema 64 ada1 Eventos: mousedown y mouseup
+         Elaborar un programa que muestre un div
+         de color rojo. Cuando se presione cambiar
+         el color a amarillo y luego de release el
+         botón del mouse volver a pintar de rojo.-->
+  <div class="box" id="box1"></div>
+  <script>
+    document.getElementById("box1").addEventListener('mousedown', press); // press = presionar
+    document.getElementById("box1").addEventListener("mouseup", release); //release = soltar
+    function press() {
+      document.getElementById("box1").style.backgroundColor = "#ffff00";
+    }
+    function release() {
+      document.getElementById("box1").style.backgroundColor = "#f00";
+    }
+  </script>
+</body>
+</html>
