@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Tema 52 ada 1 Array: método slice
+         Crear un vector de 10 elementos con valores aleatorios
+         comprendidos entre 0 y 1000. Buscar el menor y luego
+         generar otro vector a partir de dicha posición hasta el final. -->
+  <script>
+    let vector = [];
+    let valor;
+    for (f = 0; f < 10; f++) {
+      valor = parseInt(Math.random() * 1001)
+      vector.push(valor);
+    }
+    document.write("Vector original: " + "<br>");
+    for (f = 0; f < vector.length; f++) {
+      document.write(vector[f] + " ");
+    }
+    let numMenor = vector[0];
+    let pos = 0;
+    for (f = 0; f < vector.length; f++) {
+      if (vector[f] < numMenor) {
+        numMenor = vector[f];
+        pos = f;
+      }
+    }
+    document.write('<br>');
+    document.write('Elemento menor del vector: ' + numMenor + "<br>");
+    let vector2 = vector.slice(pos);
+    document.write("El nuevo vector creado a apartir del primero por el metodo slice:" + "<br>");
+    for (f = 0; f < vector2.length; f++) {
+      document.write(vector2[f] + " ");
+    }
+  </script>
+</body>
+</html>

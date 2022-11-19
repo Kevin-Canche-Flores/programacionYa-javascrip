@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Tema 51 ada 1 Array: método splice
+         Crear un vector con una lista de valores. Luego borrar las
+         componentes donde hay un 2 y al mismo tiempo insertar dos
+         elementos con el valor 1. -->
+  <h2>Crear un vector con una lista de valores. Luego borrar las
+    componentes donde hay un 2 y al mismo tiempo insertar dos
+    elementos con el valor 1.</h1>
+    <script>
+      let vector = [2, 10, 2, 8, 6, 4, 2, 9, 7, 2];
+      document.write("Vector Inicial: " + "<br>");
+      for (f = 0; f < vector.length; f++) {
+        document.write(vector[f] + " ");
+      }
+      for (f = 0; f < vector.length; f++) {
+        if (vector[f] == 2) {
+          vector.splice(f, 1, 1, 1);
+        }
+      }
+      document.write("<br>")
+      document.write("Vector Final: " + "<br>")
+      for (f = 0; f < vector.length; f++) {
+        document.write(vector[f] + " ");
+      }
+    </script>
+</body>
+</html>

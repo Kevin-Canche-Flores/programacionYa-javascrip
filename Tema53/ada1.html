@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Tema 53 ada 1 Array: método join
+         Crear un vector con los datos de 5 personas.
+         Luego imprimir por pantalla uno abajo de otro
+         utilizando el método join para generar un string
+         y agregarle entre elementos la etiqueta html <br>.-->
+  <script>
+    let vector = [];
+    for (f = 0; f < 5; f++) {
+      vector[f] = prompt("Ingrese nombre: ");
+    }
+    document.write("Vector Creado: <br>");
+    document.write(vector + "<br>");
+    document.write("Vector Utilizando el metodo join. <br>")
+    document.write(vector.join("<br>"));
+  </script>
+</body>
+</html>

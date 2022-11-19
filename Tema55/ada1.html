@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Tema 55 ada 1 Array: método toString
+        Crear un vector de 10 elementos. Inicializar los valores del vector cuando se crea. Inicializar dos variables que resulten de llamar primero al método toString() y la segunda variable inicializarla llamando al método join() sin parámetros. Mostrar un mensaje si el resultado de la ejecución de los dos métodos retorna el mismo valor (empleando un if para comparar los string)-->
+  <script>
+    let vector = [1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 10];
+    let cadenaString = vector.toString();
+    let cadenajoin = vector.join();
+    if (cadenaString === cadenajoin) {
+      document.write("Los dos metodos retornan el mismo valor.")
+    } else { document.write("Los dos metodos no devuelven el mismo valor.") }
+  </script>
+</body>
+</html>
