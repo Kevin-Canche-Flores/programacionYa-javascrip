@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .conteiner {
+      background-color: lightgreen;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: center;
+      min-width: 500px;
+    }
+    .row {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .botton {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <!--Tema 70 ada 1 Parámetro del método asociado al addEventListener   
+         Implementar un tablero de TaTeTi. Asociar el evento click de los 9
+         botones a una única función. Alternar entre las "X" y "O". Mostrar
+         un mensaje cuando gana un jugador. -->
+  <div class="conteiner">
+    <div class="row">
+      <input type="button" class="botton" id="botton1" name="botton0" value="">
+      <input type="button" class="botton" id="botton2" name="botton1" value="">
+      <input type="button" class="botton" id="botton3" name="botton2" value="">
+    </div>
+    <div class="row">
+      <input type="button" class="botton" id="botton4" name="botton3" value="">
+      <input type="button" class="botton" id="botton5" name="botton4" value="">
+      <input type="button" class="botton" id="botton6" name="botton5" value="">
+    </div>
+    <div class="row">
+      <input type="button" class="botton" id="botton7" name="botton6" value="">
+      <input type="button" class="botton" id="botton8" name="botton7" value="">
+      <input type="button" class="botton" id="botton9" name="botton8" value="">
+    </div>
+  </div>
+  <script>
+    let jugador = "X"
+    for (f = 1; f <= 9; f++) {
+      document.getElementById("botton" + f).addEventListener("click", jugada);
+    }
+    function jugada(evt) {
+      evt.target.value = jugador;
+      if (jugador == "X")
+        jugador = "O"
+      else
+        jugador = "X"
+      verificarGanador()
+    }
+    function verificarGanador() {
+      let b1 = document.getElementById("botton1").value;
+      let b2 = document.getElementById("botton2").value;
+      let b3 = document.getElementById("botton3").value;
+      let b4 = document.getElementById("botton4").value;
+      let b5 = document.getElementById("botton5").value;
+      let b6 = document.getElementById("botton6").value;
+      let b7 = document.getElementById("botton7").value;
+      let b8 = document.getElementById("botton8").value;
+      let b9 = document.getElementById("botton9").value;
+
+      //Verificando la X...............................
+      if (b1 == "X" && b2 == "X" && b3 == "X") {
+        alert("Felicidades Jugador X, Ganaste!!!");
+      }
+      if (b4 == "X" && b5 == "X" && b6 == "X") {
+        alert("Felicidades Jugador X, Ganaste!!!");
+      }
+      if (b7 == "X" && b8 == "X" && b9 == "X") {
+        alert("Felicidades Jugador X, Ganaste!!!");
+      }
+      if (b1 == "X" && b4 == "X" && b7 == "X") {
+        alert("Felicidades Jugador X, Ganaste!!!");
+      }
+      if (b2 == "X" && b5 == "X" && b8 == "X") {
+        alert("Felicidades Jugador X, Ganaste!!!");
+      }
+      if (b3 == "X" && b6 == "X" && b9 == "X") {
+        alert("Felicidades Jugador X, Ganaste!!!");
+      }
+      if (b1 == "X" && b5 == "X" && b9 == "X") {
+        alert("Felicidades Jugador X, Ganaste!!!");
+      }
+      if (b3 == "X" && b5 == "X" && b7 == "X") {
+        alert("Felicidades Jugador X, Ganaste!!!");
+      }
+      // verificando la "O".................................................
+      if (b1 == "O" && b2 == "O" && b3 == "O") {
+        alert("Felicidades Jugador O, Ganaste!!!");
+      }
+      if (b4 == "O" && b5 == "O" && b6 == "O") {
+        alert("Felicidades Jugador O, Ganaste!!!");
+      }
+      if (b7 == "O" && b8 == "O" && b9 == "O") {
+        alert("Felicidades Jugador O, Ganaste!!!");
+      }
+      if (b1 == "O" && b4 == "O" && b7 == "O") {
+        alert("Felicidades Jugador O, Ganaste!!!");
+      }
+      if (b2 == "O" && b5 == "O" && b8 == "O") {
+        alert("Felicidades Jugador O, Ganaste!!!");
+      }
+      if (b3 == "O" && b6 == "O" && b9 == "O") {
+        alert("Felicidades Jugador O, Ganaste!!!");
+      }
+      if (b1 == "O" && b5 == "O" && b9 == "O") {
+        alert("Felicidades Jugador O, Ganaste!!!");
+      }
+      if (b3 == "O" && b5 == "O" && b7 == "O") {
+        alert("Felicidades Jugador O, Ganaste!!!");
+      }
+    }
+  </script>
+</body>
+</html>

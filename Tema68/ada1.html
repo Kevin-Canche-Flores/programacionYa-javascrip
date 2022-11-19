@@ -1,0 +1,30 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Tema 68 ada1 Evento: change
+         Confeccionar un formulario que muestre un checkbox
+         que cuando se tilde active un botón (el checkbox
+         debe mostrar un mensaje que diga : "Confirma los 
+         términos y condiciones?")-->
+  <form action="#">
+    <input type="checkbox" id="confirm" name="checkbox1">Confirma los
+    términos y condiciones? <br>
+    <input type="submit" value="Enviar" id="submit" disabled>
+  </form>
+  <script>
+    document.getElementById("confirm").addEventListener("change", verificar);
+    function verificar() {
+      if (document.getElementById(confirm) == true) {
+        document.getElementById("submit").disabled = true;
+      } else {
+        document.getElementById("submit").disabled = false;
+      }
+    }
+  </script>
+</body>
+</html>

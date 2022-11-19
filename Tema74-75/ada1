@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  </style>
+</head>
+<body>
+  <!--Tema 74 y 73 ada 1 Función isFinite y Función isNaN  
+         Se ingresan por teclado dos números (emplear parseFloat para
+         convertirlos) mostrar un mensaje si alguno de los dos no es
+         un número (isNaN). Luego si son valores numéricos proceder a
+         multiplicarlos y verificar si el resultado es finito (isFinite)
+         para mostrar el resultado. -->
+  <script>
+    function verificarIsNaN() {
+      // Funcion anidada para multiplicar y verificar si es un número finito.....................
+      function multiplicar(x, y) {
+        let resultado = x * y;
+        if (isFinite(resultado)) {
+          document.write("El producto de ambos numeros es finito y el valor es: " + resultado);
+        }
+        else
+          document.write("El resultado de multiplicar dichos valores es infinito");
+      }
+      //COMIEMZO DEL BLOQUE DE CODIGO....
+      let num1 = parseFloat(prompt("Ingrese el primer valor: "));
+      let num2 = parseFloat(prompt("Ingrese el segundo valor: "));
+      if (isNaN(num1) || isNaN(num2)) {
+        alert("Al menos uno de los valores ingresados no es un número.")
+      }
+      multiplicar(num1, num2);
+    }
+    verificarIsNaN();
+  </script>
+  </script>
+</body>
+</html>
