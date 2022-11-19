@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--Tema 77 al 80 es el mismo tema de expresiones regulares... ada 2
+     Solicitar el ingreso de la coordenada de un punto.
+     El formato a ingresar por teclado es: (999,999)
+     Los números pueden tener entre 1 y 3 dígitos.-->
+  <script>
+    function coordenada() {
+      let coordenada = prompt("Ingrese coordenada ejemplo(999,999):");
+      let patron = /^[0-9]{1,3}\,[0-9]{1,3}$/;
+      if (patron.test(coordenada)) {
+        alert("El formato de ingreso es correcto.")
+      }
+      else {
+        alert("El formato de ingreso no es correcto.")
+      }
+    }
+    coordenada();
+  </script>
+</body>
+</html>

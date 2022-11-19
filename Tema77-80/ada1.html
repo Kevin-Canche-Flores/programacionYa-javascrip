@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--Tema 77 al 80 es el mismo tema de expresiones regulares... ada 1 
+    Validar que se ingrese un número de 3 dígitos enteros, el carácter punto y 2 dígitos decimales. -->
+  <script>
+    function verificarnNumDecimal() {
+      let num = prompt("Ingrese un numero decimal (Ejemplo: 123.45): ")
+      let patron = /^[0-9]{3}\.[0-9]{2}$/;
+      if (patron.test(num)) {
+        alert("El valor ingresado es decimal.");
+      }
+      else {
+        alert("El valor ingresado no es decimal.");
+      }
+    }
+    verificarnNumDecimal();
+  </script>
+</body>
+</html>
